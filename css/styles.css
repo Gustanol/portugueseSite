@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+.winky-sans {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8vw;
+}
+
+:root {
+  --mainBackground: #F9EBD8;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,8 +31,124 @@ body {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: center;
+  background: var(--mainBackground);
 }
 html {
   overflow-x: hidden;
   font-size: 20px;
+  color: white;
+}
+header {
+  background: #0e0e0e;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 3%;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header > div:first-of-type {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+header > div:first-of-type > img {
+  width: 6vw;
+  aspect-ratio: 1/1;
+}
+header > div:first-of-type > span {
+  font-size: 3vw;
+  flex: 0 0 auto;
+}
+.mainNav {
+  width: 100vw;
+  height: auto;
+  background: #980404;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  gap: 2%;
+}
+.mainNav > p {
+  cursor: pointer;
+}
+main {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--mainBackground);
+}
+main > * {
+  flex: 0 0 auto;
+}
+.home {
+  width: 100vw;
+  background: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.imgHome {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+.imgHome > img {
+  width: 80%;
+}
+.mainHome {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainHome > * {
+  flex: 0 0 auto;
+}
+.mainHome > div:first-of-type {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.mainHome > div:first-of-type > p:first-of-type {
+  color: #FF936E;
+}
+.mainHome > div:first-of-type > p:last-of-type {
+  color: #fca080;
+}
+.bannerHome {
+  width: 90%;
+  height: 10%;
+  background: #980404;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  border-radius: 5vw;
+}
+.bannerHome > p {
+  font-size: 3vw;
 }
