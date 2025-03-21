@@ -152,3 +152,59 @@ main > * {
 .bannerHome > p {
   font-size: 3vw;
 }
+.slider {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  font-size: 2vw;
+}
+.slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.slide {
+  height: 100%;
+  width: 100vw;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 3vw;
+}
+.leftArrow, .rightArrow {
+  position: absolute;
+  top: 45%;
+  width: 5vw;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  padding: 1%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.leftArrow {
+  left: 3%;
+  padding-right: 0;
+}
+.rightArrow {
+  right: 3%;
+}
+.firstClone {
+  opacity: 0;
+}
