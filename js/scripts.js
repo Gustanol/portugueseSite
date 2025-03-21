@@ -1,6 +1,9 @@
 const home = document.querySelector(".home");
 const header = document.querySelector("header");
+const headerFirstDiv = document.querySelector("header > div:first-of-type");
 const mainNav = document.querySelector(".mainNav");
+const iluminismoButton = document.querySelector(".mainNav > p:first-of-type");
+const arcadismoButton = document.querySelector(".mainNav > p:nth-of-type(2)");
 const main = document.querySelector("main");
 
 let iluminismo = document.querySelector("#iluminismo");
@@ -13,7 +16,7 @@ let active = false;
 const slide = document.querySelectorAll('.slide');
 const firstClone = document.querySelectorAll('.firstClone');
 
-const totalSlides = slide.length/2;
+const totalSlides = slide.length/slider.length;
 let slideInterval;
 
 const leftArrow = document.querySelectorAll(".leftArrow");
@@ -73,4 +76,58 @@ rightArrow.forEach((rightArrowItem) => {
   rightArrowItem.addEventListener("click", () => {
     showSlide(currentIndex + 1);
   });
+});
+
+iluminismoButton.addEventListener("click", () => {
+  if (window.getComputedStyle(home).display != "none") {
+    home.style.opacity = "0";
+    setTimeout(() => {
+      home.style.display = "none";
+    }, 700);
+  } else if (window.getComputedStyle(arcadismo).display != "none") {
+    arcadismo.style.opacity = "0";
+    setTimeout(() => {
+      arcadismo.style.display = "none";
+    }, 700);
+  }
+  iluminismo.style.display = "flex";
+  setTimeout(() => {
+    iluminismo.style.opacity = "1";
+  }, 900);
+});
+
+arcadismoButton.addEventListener("click", () => {
+  if (window.getComputedStyle(home).display != "none") {
+    home.style.opacity = "0";
+    setTimeout(() => {
+      home.style.display = "none";
+    }, 700);
+  } else if (window.getComputedStyle(iluminismo).display != "none") {
+    iluminismo.style.opacity = "0";
+    setTimeout(() => {
+      iluminismo.style.display = "none";
+    }, 700);
+  }
+  arcadismo.style.display = "flex";
+  setTimeout(() => {
+    arcadismo.style.opacity = "1";
+  }, 900);
+});
+
+headerFirstDiv.addEventListener("click", () => {
+  if (window.getComputedStyle(iluminismo).display != "none") {
+    iluminismo.style.opacity = "0";
+    setTimeout(() => {
+      iluminismo.style.display = "none";
+    }, 700);
+  } else if (window.getComputedStyle(arcadismo).display != "none") {
+    arcadismo.style.opacity = "0";
+    setTimeout(() => {
+      arcadismo.style.display = "none";
+    }, 700);
+  }
+  home.style.display = "flex";
+  setTimeout(() => {
+    home.style.opacity = "1";
+  }, 900);
 });

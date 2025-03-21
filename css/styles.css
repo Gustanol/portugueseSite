@@ -58,6 +58,7 @@ header > div:first-of-type {
   justify-content: center;
   align-items: center;
   gap: 10%;
+  cursor: pointer;
 }
 header > div:first-of-type > img {
   width: 6vw;
@@ -100,6 +101,8 @@ main > * {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 .imgHome {
   height: 100%;
@@ -156,12 +159,16 @@ main > * {
   width: 100vw;
   height: 100%;
   overflow: hidden;
-  display: none;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   position: relative;
   font-size: 2vw;
+}
+#iluminismo, #arcadismo {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 .slides {
   display: -webkit-box;
