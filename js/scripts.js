@@ -93,6 +93,7 @@ iluminismoButton.addEventListener("click", () => {
   iluminismo.style.display = "flex";
   setTimeout(() => {
     iluminismo.style.opacity = "1";
+    showSlide(currentIndex);
   }, 900);
 });
 
@@ -111,6 +112,7 @@ arcadismoButton.addEventListener("click", () => {
   arcadismo.style.display = "flex";
   setTimeout(() => {
     arcadismo.style.opacity = "1";
+    showSlide(currentIndex);
   }, 900);
 });
 
@@ -131,3 +133,5 @@ headerFirstDiv.addEventListener("click", () => {
     home.style.opacity = "1";
   }, 900);
 });
+
+console.log("Current Index:", currentIndex);

@@ -158,7 +158,7 @@ main > * {
 .slider {
   width: 100vw;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
@@ -173,6 +173,7 @@ main > * {
 .slides {
   display: -webkit-box;
   display: -ms-flexbox;
+  min-width: 100%;
   display: flex;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -182,13 +183,14 @@ main > * {
 }
 .slide {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   flex: 0 0 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-size: 3vw;
+  max-width: 100%;
 }
 .leftArrow, .rightArrow {
   position: absolute;
