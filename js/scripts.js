@@ -2,9 +2,11 @@ const home = document.querySelector(".home");
 const header = document.querySelector("header");
 const headerFirstDiv = document.querySelector("header > div:first-of-type");
 const mainNav = document.querySelector(".mainNav");
+const mainNavP = mainNav.querySelectorAll("p");
 const iluminismoButton = document.querySelector(".mainNav > p:first-of-type");
 const arcadismoButton = document.querySelector(".mainNav > p:nth-of-type(2)");
 const main = document.querySelector("main");
+let slidesCounter = document.querySelectorAll(".slideCounter");
 
 let iluminismo = document.querySelector("#iluminismo");
 let arcadismo = document.querySelector("#arcadismo");
@@ -13,10 +15,10 @@ const slider = document.querySelectorAll(".slider");
 const slides = document.querySelectorAll(".slides");
 let currentIndex = 1;
 let active = false;
-const slide = document.querySelectorAll('.slide');
+let slide = document.querySelectorAll('.slide');
 const firstClone = document.querySelectorAll('.firstClone');
 
-const totalSlides = slide.length/slider.length;
+let totalSlides = slide.length;
 let slideInterval;
 
 const leftArrow = document.querySelectorAll(".leftArrow");
@@ -50,6 +52,15 @@ function showSlide(index) {
       : 'none';
   
     slidesItem.style.transform = `translateX(${-currentIndex * 100}%)`;
+    slidesCounter.forEach((slideCounter) => {
+      if (currentIndex === totalSlides - 1) {
+        slideCounter.innerHTML = `${1} / ${totalSlides - 2}`;
+      } else if (currentIndex === 0) {
+        slideCounter.innerHTML = `${totalSlides - 2} / ${totalSlides - 2}`;
+      } else {
+        slideCounter.innerHTML = `${currentIndex} / ${totalSlides - 2}`;
+      }
+    });
     slidesItem.addEventListener("transitionend", () => {
       if (currentIndex === 0) {
         slidesItem.style.transition = "none";
@@ -79,6 +90,16 @@ rightArrow.forEach((rightArrowItem) => {
 });
 
 iluminismoButton.addEventListener("click", () => {
+  mainNavP.forEach((p) => {
+    p.style.color = "white";
+  });
+  document.querySelector(".mainNav > p:first-of-type").style.color = "#fada9e";
+  slide = iluminismo.querySelectorAll(".slide");
+  totalSlides = slide.length;
+  slidesCounter.forEach((slideCounter) => {
+    slideCounter.innerHTML = `${currentIndex} / ${totalSlides - 2}`;
+  });
+  showSlide(1);
   if (window.getComputedStyle(home).display != "none") {
     home.style.opacity = "0";
     setTimeout(() => {
@@ -98,6 +119,16 @@ iluminismoButton.addEventListener("click", () => {
 });
 
 arcadismoButton.addEventListener("click", () => {
+  mainNavP.forEach((p) => {
+    p.style.color = "white";
+  });
+  document.querySelector(".mainNav > p:nth-of-type(2)").style.color = "#fada9e";
+  slide = arcadismo.querySelectorAll(".slide");
+  totalSlides = slide.length;
+  slidesCounter.forEach((slideCounter) => {
+    slideCounter.innerHTML = `${currentIndex} / ${totalSlides - 2}`;
+  });
+  showSlide(1);
   if (window.getComputedStyle(home).display != "none") {
     home.style.opacity = "0";
     setTimeout(() => {
@@ -133,5 +164,3 @@ headerFirstDiv.addEventListener("click", () => {
     home.style.opacity = "1";
   }, 900);
 });
-
-console.log("Current Index:", currentIndex);
