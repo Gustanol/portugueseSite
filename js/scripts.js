@@ -5,6 +5,7 @@ const mainNav = document.querySelector(".mainNav");
 const mainNavP = mainNav.querySelectorAll("p");
 const iluminismoButton = document.querySelector(".mainNav > p:first-of-type");
 const arcadismoButton = document.querySelector(".mainNav > p:nth-of-type(2)");
+const ideasContainer = document.querySelector(".ideasContainer");
 const main = document.querySelector("main");
 let slidesCounter = document.querySelectorAll(".slideCounter");
 
@@ -163,4 +164,44 @@ headerFirstDiv.addEventListener("click", () => {
   setTimeout(() => {
     home.style.opacity = "1";
   }, 900);
+});
+
+document.querySelector("#johnLocke").addEventListener("mouseenter", () => {
+  ideasContainer.innerHTML = '<p class="winky-sans">John Locke</p><p>John Locke acreditava que a mente era como uma "tabula rasa". Rejeitava qualquer concepção embasada no argumento das "ideias inatas".</p><p>Locke procurava demonstrar que a origem de nossas ideias deriva dos sentidos do corpo e da reflexão sobre o que o corpo informa.</p><p>Em suas reflexões acerca da origem da sociedade, Locke combate os teóricos que defendiam o direito divino dos reis governarem.</p><p style="font-weight: bold;">"A liberdade do homem na sociedade não deve estar edificada sob qualquer poder legislativo exceto aquele estabelecido por consentimento na comunidade civil."</p>';
+  ideasContainer.style.visibility = "visible";
+  ideasContainer.style.opacity = "1";
+});
+document.querySelector("#johnLocke").addEventListener("mouseleave", () => {
+  ideasContainer.style.visibility = "hidden";
+  ideasContainer.style.opacity = "0";
+});
+
+document.querySelector("#voltaire").addEventListener("mouseenter", () => {
+  ideasContainer.innerHTML = '<p class="winky-sans">François-Marie Arouet - Voltaire</p><p>Voltaire defendia a ideia de uma <span style="font-weight: bold;">monarquia centralizada</span>, cujo monarca deveria ser culto e assessorado por filósofos.</p><p>Foi um crítico severo das instituições religiosas, bem como dos hábitos feudais que ainda vigoravam na Europa. Mas, também foi opositor do ateísmo. Assim sendo, afirmava que apenas aqueles dotados de razão e liberdade poderiam conhecer as vontades e desígnios divinos.</p><p style="font-weight: bold;">"A mesma força de nosso entendimento que nos fez conhecer a aritmética, a geometria, a astronomia, que nos fez inventar as leis, também nos fez, portanto, conhecer Deus (...)"</p>';
+  ideasContainer.style.visibility = "visible";
+  ideasContainer.style.opacity = "1";
+});
+document.querySelector("#voltaire").addEventListener("mouseleave", () => {
+  ideasContainer.style.visibility = "hidden";
+  ideasContainer.style.opacity = "0";
+});
+
+document.querySelector("#rousseau").addEventListener("mouseenter", () => {
+  ideasContainer.innerHTML = '<p class="winky-sans">Jean-Jacques Rousseau</p><p>Rousseau defendia que o homem natural, embora necessitasse se preservar em virtude do “amor de si mesmo”, era dotado de uma “piedade natural”. Essa piedade levava os homens, em certa medida, a uma ajuda mútua, a fim de evitarem o sofrimento.</p><p>Rousseau dizia que a propriedade privada gerava a desigualdade entre os homens e, com ela, a luta pelo poder e a exploração dos demais homens.</p><p>O filósofo era a favor do estabelecimento de uma nova forma de “<span style="font-weight: bold;">contrato social</span>” baseado na “vontade geral”.</p><p style="font-weight: bold;">"O homem nasceu livre, e em toda parte se encontra acorrentado."</p>';
+  ideasContainer.style.visibility = "visible";
+  ideasContainer.style.opacity = "1";
+});
+document.querySelector("#rousseau").addEventListener("mouseleave", () => {
+  ideasContainer.style.visibility = "hidden";
+  ideasContainer.style.opacity = "0";
+});
+
+document.querySelector("#montesquieu").addEventListener("mouseenter", () => {
+  ideasContainer.innerHTML = '<p class="winky-sans">Charles-Louis de Secondat - Montesquieu</p><p>Montesquieu criticou, de forma sistemática, o autoritarismo político, além de condenar a escravidão dos negros.</p><p>Em seu pensamento, há a necessidade da existência de algo igualmente poderoso que seja capaz de impedir os abusos de poder de outros.</p><p>Para ele, a monarquia inglesa é um governo que exemplifica esse ideal político, pois apresenta um equilíbrio tanto entre suas classes, como entre os poderes de seu sistema de governo.</p><p style="font-weight: bold;">"A liberdade é o direito de fazer aquilo que as leis permitem (...)"</p>';
+  ideasContainer.style.visibility = "visible";
+  ideasContainer.style.opacity = "1";
+});
+document.querySelector("#montesquieu").addEventListener("mouseleave", () => {
+  ideasContainer.style.visibility = "hidden";
+  ideasContainer.style.opacity = "0";
 });
