@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 32 32" xml:space="preserve">
+<style type="text/css">
+	.isometric_een{fill:#F8F7C5;}
+	.isometric_twee{fill:#F5DF89;}
+	.isometric_vier{fill:#AD9A74;}
+	.isometric_vijf{fill:#F29227;}
+	.isometric_zeven{fill:#FF7344;}
+	.st0{fill:#225B49;}
+	.st1{fill:#569080;}
+	.st2{fill:#F28103;}
+	.st3{fill:#7BD6C4;}
+	.st4{fill:#72C0AB;}
+	.st5{fill:#BE1E2D;}
+	.st6{fill:#F05A28;}
+	.st7{fill:#F29227;}
+	.st8{fill:none;}
+	.st9{fill:#F2D76C;}
+</style>
+<g>
+	<path class="isometric_een" d="M13.679,5.098l-3.443,1.988l17.31,9.998L31,15.09L13.679,5.098z M23.17,13.619l-6.928-4l1.721-0.994
+		l6.928,4L23.17,13.619z M25.804,18.098v-0.016l-4.33,2.5c-2.303,1.33-3.467,5.216-1.839,6.148C18.142,25.932,2.46,17.009,2,16.68
+		c-0.407-0.291-0.654-0.841-0.654-1.6c0-3.73,4.312-5.372,7.132-7l17.358,10L25.804,18.098z"/>
+	<polygon class="isometric_een" points="8.143,9.355 15.071,13.355 13.35,14.349 6.422,10.349 	"/>
+	<polygon class="isometric_een" points="10.716,15.809 3.788,11.809 5.509,10.815 12.437,14.815 	"/>
+	<polygon class="isometric_een" points="19.376,20.809 12.448,16.809 16.751,14.325 23.679,18.325 	"/>
+	<path class="isometric_vier" d="M17.963,8.625l6.928,4l-1.721,0.994l-6.928-4L17.963,8.625z M15.071,13.355l-6.928-4l-1.721,0.994
+		l6.928,4L15.071,13.355z M3.788,11.809l6.928,4l1.721-0.994l-6.928-4L3.788,11.809z M12.448,16.809l6.928,4l4.303-2.484l-6.928-4
+		L12.448,16.809z"/>
+	<path class="isometric_twee" d="M24.099,21.054l1.721,0.994L24.099,21.054z"/>
+	<path class="isometric_vijf" d="M25.82,22.048l-0.016,0.01l-4.07,2.35c-1.128,0.651-1.166-1.314,0-1.988l2.365-1.365L25.82,22.048z
+		 M31,19.057l-1.742-0.978c-2.203,1.272-1.256,0.725-3.443,1.988l1.717,0.994L31,19.057z"/>
+	<polygon class="isometric_zeven" points="27.533,21.061 25.783,20.06 25.767,20.07 24.062,21.054 25.783,22.048 25.804,22.06 	"/>
+	<path class="isometric_twee" d="M25.82,22.048l0.021,0.012L25.82,22.048z"/>
+	<path class="isometric_vier" d="M25.804,20.07v-1.988l1.743-0.998l-0.011,1.986L25.804,20.07z M27.533,21.061l-1.729,0.996v1.988
+		l1.732-1L27.533,21.061z"/>
+	<path class="isometric_twee" d="M25.836,18.08l-17.358-10l1.759-0.994l17.31,9.998L25.836,18.08z M25.804,22.057l-4.07,2.35
+		c-1.127,0.651-1.166-1.314,0-1.988l4.07-2.35v-1.988l-4.33,2.5c-3.499,2.02-3.382,7.915,0,5.963l4.33-2.5V22.057z M31,17.07v-1.98
+		l-3.453,1.994l-0.011,1.986L31,17.07z M31,19.057l-3.467,2.004l0.003,1.983l3.464-2V19.057z"/>
+</g>
+</svg>

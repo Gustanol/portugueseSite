@@ -68,6 +68,9 @@ header > div:first-of-type > span {
   font-size: 3vw;
   flex: 0 0 auto;
 }
+header > p {
+  font-size: 3vw;
+}
 .mainNav {
   width: 100vw;
   height: auto;
@@ -194,6 +197,7 @@ main > * {
   max-width: 100%;
   padding: 2% 12%;
   gap: 2%;
+  transition: filter 0.2s ease-in-out, backdrop-filter 0.2s ease-in-out;
 }
 .leftArrow, .rightArrow {
   position: absolute;
@@ -236,11 +240,13 @@ main > * {
   font-size: 2vw;
   border-radius: 1vw;
 }
-.slide > p, .slide > ul {
-  font-size: 3vw;
+.slide p, .slide ul {
+  font-size: 2.3vw;
+  font-family: 'Arial';
 }
 .slide > .winky-sans:first-of-type {
-  font-size: 4.5vw;
+  font-family: "Winky Sans", sans-serif;
+  font-size: 3.5vw;
   font-weight: 600;
 }
 .slide > span {
@@ -256,30 +262,34 @@ main > * {
   width: 12vw;
   height: auto;
 }
-.slide > ul > li > span {
+.slide > ul > li > span:first-of-type {
   text-decoration: underline;
 }
 .ideasContainer {
-  height: 85%;
-  aspect-ratio: 1.3;
-  margin-top: -55%;
-  background: rgba(0, 0, 0, 0.7);
+  width: 75vw;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 12.5vw;
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 2vw;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 2%;
+  gap: 3vh;
   padding: 1% 2%;
   color: white;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: visibility 0.2s ease-in-out, opacity 0.3s ease-in-out;
 }
 .ideasContainer > .winky-sans:first-of-type {
-  font-size: 4vw;
+  font-size: 3.5vw;
+  font-family: "Winky Sans", sans-serif;
 }
 .ideasContainer > p {
-  font-size: 2.5vw;
+  font-size: 2vw;
+  font-family: 'Arial';
 }
