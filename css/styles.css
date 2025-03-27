@@ -240,7 +240,7 @@ main > * {
   font-size: 2vw;
   border-radius: 1vw;
 }
-.slide p, .slide ul {
+.slide p, .slide ul, .slide ol {
   font-size: 2.3vw;
   font-family: 'Arial';
 }

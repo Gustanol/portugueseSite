@@ -324,3 +324,30 @@ document.querySelector("#durao").addEventListener("mouseleave", () => {
     });
   });
 });
+
+document.querySelector("#inconfidencia").addEventListener("mouseenter", () => {
+  ideasContainer.forEach((ideaContainer) => {
+    ideaContainer.innerHTML = '<p>Muitos poetas árcades brasileiros, como <span style="font-weight: bold;">Tomás Antônio Gonzaga</span> e <span style="font-weight: bold;">Cláudio Manuel da Costa</span>, participaram da <span style="font-weight: bold;">Inconfidência Mineira (1789)</span>, um movimento de tentativa de independência do Brasil, inspirado pelo Iluminismo.</p><p>Por conta disso, a literatura árcade também trazia críticas sutis à exploração colonial portuguesa, promovendo ideias de liberdade e autonomia.</p>';
+    ideaContainer.style.visibility = "visible";
+    ideaContainer.style.opacity = "1"; 
+  });
+  slide.forEach((slideItem) => {
+    slideItem.style.backdropFilter = "blur(50px)";
+    document.querySelectorAll(".slide > p, .slide > span, .slide > ul, .slide > ol, .leftArrow, .rightArrow, .slideCounter").forEach((item) => {
+      item.style.filter = "blur(50px)";
+    });
+  });
+});
+
+document.querySelector("#inconfidencia").addEventListener("mouseleave", () => {
+  ideasContainer.forEach((ideaContainer) => {
+    ideaContainer.style.visibility = "hidden";
+    ideaContainer.style.opacity = "0";
+  });
+  slide.forEach((slideItem) => {
+    slideItem.style.backdropFilter = "blur(50px)";
+    document.querySelectorAll(".slide > p, .slide > span, .slide > ul, .slide > ol, .leftArrow, .rightArrow, .slideCounter").forEach((item) => {
+      item.style.filter = "blur(0)";
+    });
+  });
+});
