@@ -5,12 +5,14 @@ const mainNav = document.querySelector(".mainNav");
 const mainNavP = mainNav.querySelectorAll("p");
 const iluminismoButton = document.querySelector(".mainNav > p:first-of-type");
 const arcadismoButton = document.querySelector(".mainNav > p:nth-of-type(2)");
+const gameButton = document.querySelector(".mainNav > p:nth-of-type(3)");
 const ideasContainer = document.querySelectorAll(".ideasContainer");
 const main = document.querySelector("main");
 let slidesCounter = document.querySelectorAll(".slideCounter");
 
 let iluminismo = document.querySelector("#iluminismo");
 let arcadismo = document.querySelector("#arcadismo");
+let game = document.querySelector("#game");
 
 const slider = document.querySelectorAll(".slider");
 const slides = document.querySelectorAll(".slides");
@@ -33,6 +35,7 @@ window.addEventListener("load", () => {
   slides.forEach((slidesItem) => {
     slidesItem.style.height = `${window.innerHeight - header.offsetHeight - mainNav.offsetHeight}px`;
   });
+  game.style.height = `${window.innerHeight - header.offsetHeight - mainNav.offsetHeight}px`;
 });
 
 setTimeout(() => {
@@ -108,6 +111,11 @@ iluminismoButton.addEventListener("click", () => {
     setTimeout(() => {
       arcadismo.style.display = "none";
     }, 700);
+  } else if (window.getComputedStyle(game).display != "none") {
+    game.style.opacity = "0";
+    setTimeout(() => {
+      game.style.display = "none";
+    }, 700);
   }
   iluminismo.style.display = "flex";
   setTimeout(() => {
@@ -134,6 +142,11 @@ arcadismoButton.addEventListener("click", () => {
     setTimeout(() => {
       iluminismo.style.display = "none";
     }, 700);
+  } else if (window.getComputedStyle(game).display != "none") {
+    game.style.opacity = "0";
+    setTimeout(() => {
+      game.style.display = "none";
+    }, 700);
   }
   arcadismo.style.display = "flex";
   setTimeout(() => {
@@ -156,11 +169,69 @@ headerFirstDiv.addEventListener("click", () => {
     setTimeout(() => {
       arcadismo.style.display = "none";
     }, 700);
+  } else if (window.getComputedStyle(game).display != "none") {
+    game.style.opacity = "0";
+    setTimeout(() => {
+      game.style.display = "none";
+    }, 700);
   }
   home.style.display = "flex";
   setTimeout(() => {
     home.style.opacity = "1";
   }, 900);
+});
+
+gameButton.addEventListener("click", () => {
+  mainNavP.forEach((p) => {
+    p.style.color = "white";
+  });
+  document.querySelector(".mainNav > p:nth-of-type(3)").style.color = "#fada9e";
+  slide = game.querySelectorAll(".slide");
+  totalSlides = slide.length;
+  showSlide(1);
+  if (window.getComputedStyle(home).display != "none") {
+    home.style.opacity = "0";
+    setTimeout(() => {
+      home.style.display = "none";
+    }, 700);
+  } else if (window.getComputedStyle(iluminismo).display != "none") {
+    iluminismo.style.opacity = "0";
+    setTimeout(() => {
+      iluminismo.style.display = "none";
+    }, 700);
+  } else if (window.getComputedStyle(arcadismo).display != "none") {
+    arcadismo.style.opacity = "0";
+    setTimeout(() => {
+      arcadismo.style.display = "none";
+    }, 700);
+  }
+  game.style.display = "flex";
+  setTimeout(() => {
+    game.style.opacity = "1";
+    document.querySelector("#sliderGame").style.opacity = "1";
+    showSlide(currentIndex);
+  }, 900);
+});
+
+document.querySelector("#gameStart").addEventListener("click", () => {
+  document.querySelector("#sliderGame").style.opacity = "0";
+  setTimeout(() => {
+    document.querySelector("#sliderGame").style.display = "none";
+    document.querySelector("iframe").style.display = "flex";
+  }, 700);
+  setTimeout(() => {
+    document.querySelector("iframe").style.opacity = "1";
+  }, 900);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "f") {
+    if (!document.fullscreenElement) {
+      game.requestFullscreen().catch(err => console.log("Error:", err));
+    } else {
+      document.exitFullscreen();
+    }
+  }
 });
 
 document.querySelector("#johnLocke").addEventListener("mouseenter", () => {

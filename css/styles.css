@@ -293,3 +293,39 @@ main > * {
   font-size: 2vw;
   font-family: 'Arial';
 }
+#game {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+iframe {
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#sliderGame {
+  width: 100%;
+  height: 50vh;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.slideImg {
+  width: 95%;
+  height: 100%;
+  object-fit: contain;
+}
+#gameStart {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+#textId, #gameStart {
+  position: relative;
+  top: 45%;
+}
